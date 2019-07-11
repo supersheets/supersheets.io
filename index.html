@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Supersheets | </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <style>
+      .columns nav {
+        padding: 0 .75rem;
+      }
+      .hero .title {
+        margin-bottom: 3rem;
+      }
+      .hero .subtitle {
+        margin-bottom: 1rem;
+      }
+      .hero .actions {
+      }
+      .hero ul li {
+        margin-left: 2rem;
+        list-style-type: disc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="columns is-mobile">
+      <div class="column is-2"></div>
+      <div class="column is-8">
+        <nav class="navbar is-white" role="navigation" aria-label="main navigation">
+          <div class="navbar-brand">
+            <a class="navbar-item logo" to="/" v-show="user">Supersheets</a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+          <div class="navbar-menu">
+            <div class="navbar-start">
+            </div>
+            
+            <div class="navbar-end">
+              <div class="navbar-item">
+                <div class="buttons">
+                  <a class="button is-white" href="https://app.supersheets.io">
+                    Sign in &#8594;
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <section class="hero is-medium">
+          <div class="hero-body">
+            <div class="container">
+              <h1 class="title headline is-1">
+                Features, not forms 
+              </h1>
+              <h2 class="subtitle">
+                Supersheets is headless CMS powered by G Suite
+              </h2>
+              <ul>
+                <li>Writers create content with Google Sheets and Docs.</li> 
+                <li>Developers build product and not internal forms.</li>
+              </ul>
+              <br/>
+              <p class="help">
+                  <strong>Currently in private beta.</strong>
+              </p>
+              <div class="columns">
+                <div class="column">
+                    <p class="help">
+                      There are applications in production that are built on Supersheets. Please sign up below if you feel Supersheets could be ideal for your project.
+                    </p>
+                    <br/>
+                    <div class="field has-addons">
+                      <div class="control is-expanded">
+                        <input class="input is-medium" type="text" placeholder="Email address">
+                      </div>
+                      <div class="control">
+                        <a class="button is-info is-medium">
+                          Join our beta
+                        </a>
+                      </div>
+                    </div>
+                </div>
+                <div class="column is-5"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="section">
+          <div class="container">
+          </div>
+        </section>
+      </div>
+      <div class="column is-2"></div>
+    </div>
+  </body>
+</html>
+
