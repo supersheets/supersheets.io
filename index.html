@@ -23,6 +23,15 @@
         list-style-type: disc;
       }
     </style>
+    <script>
+      const formurl = "https://docs.google.com/forms/d/e/1FAIpQLScCzl-KnFYyAbYUA7X2eM2161dOruDJ0EuS_wDMV6WxY_CsyQ/viewform?usp=pp_url&entry.1651274551=$email"
+      function clickJoin() {
+        let button = document.getElementById("join")
+        button.classList.add('is-loading')
+        let email = document.getElementById("email").value
+        window.location = formurl.replace("$email", email.trim())
+      }
+    </script>
   </head>
   <body>
     <div class="columns is-mobile">
@@ -40,7 +49,6 @@
           <div class="navbar-menu">
             <div class="navbar-start">
             </div>
-            
             <div class="navbar-end">
               <div class="navbar-item">
                 <div class="buttons">
@@ -77,10 +85,10 @@
                     <br/>
                     <div class="field has-addons">
                       <div class="control is-expanded">
-                        <input class="input is-medium" type="text" placeholder="Email address">
+                        <input id="email" class="input is-medium" type="text" placeholder="Email address">
                       </div>
                       <div class="control">
-                        <a class="button is-info is-medium">
+                        <a id="join" class="button is-info is-medium" onclick="clickJoin()">
                           Join our beta
                         </a>
                       </div>
@@ -100,4 +108,5 @@
     </div>
   </body>
 </html>
+
 
