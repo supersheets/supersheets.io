@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gatsby Demo | Supersheets</title>
+    <!-- https://realfavicongenerator.net -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon.png?v=QEJBQYagwB">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicons/favicon-32x32.png?v=QEJBQYagwB">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicons/favicon-16x16.png?v=QEJBQYagwB">
+    <link rel="manifest" href="/img/favicons/site.webmanifest?v=QEJBQYagwB">
+    <link rel="mask-icon" href="/img/favicons/safari-pinned-tab.svg?v=QEJBQYagwB" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicon.ico?v=QEJBQYagwB">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+     <!-- END -->
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <style>
+      body {
+        
+      }
+      .logo {
+        font-family: 'Luckiest Guy', cursive;
+        font-size: 150%;
+        padding-top: 10%;
+      }
+      .headline {
+        line-height: 1.65em;
+        color: #000;
+      }
+      .highlight {
+        padding: .2em;
+        color: #FFF;
+        background: #ff3860;
+      }
+      .highlight.yellow {
+        background: #FFC;
+      }
+      .highlight.blue {
+        background: #516CE0;
+      }
+      .highlight.green {
+        background: #86E2B5;
+      }
+      .highlight.pink {
+        background: #FEBBE2;
+      }
+      .columns nav {
+        padding: 0 .75rem;
+      }
+      .hero .title {
+        margin-bottom: 3rem;
+      }
+      .hero .subtitle {
+        margin-bottom: 1rem;
+      }
+      .hero ul li {
+        margin-left: 2rem;
+        list-style-type: disc;
+      }
+      .section .title {
+        color: #000;
+      }
+      .section.cta {
+        padding-left: 3rem;
+        padding-right: 3rem;
+      }
+      .image.gatsby img {
+        /* height: 128px;
+        width: auto; */
+      }
+      .image.webflow img {
+        /* height: 256px;
+        width: auto; */
+      }
+      .image.graphql img {
+        /* height: 128px;
+        width: auto; */
+      }
+      .footer {
+        background-color: #FFF;
+      }
+      .hero.cta p {
+        color: #FFF;
+      }
+      span.step {
+        background: #ff3860;
+        border-radius: 0.8em;
+        -moz-border-radius: 0.8em;
+        -webkit-border-radius: 0.8em;
+        color: #ffffff;
+        display: inline-block;
+        font-weight: bold;
+        text-align: center;
+        width: 1.6em; 
+        line-height: 1.6em;
+        margin-right: .5em;
+        /* line-height: 1.6em;
+        margin-right: 3rem;
+        font-size: 1.5rem; */
+      }
+      .checkmark {
+        color:  #ff3860;
+      }
+      .features h3.is-4 {
+        margin-bottom: .5rem;
+      }
+      .features .description {
+        margin-left: 1.7rem;
+        margin-bottom: 2rem;
+      }
+    </style>
+    <script>
+      const formurl = "https://docs.google.com/forms/d/e/1FAIpQLScCzl-KnFYyAbYUA7X2eM2161dOruDJ0EuS_wDMV6WxY_CsyQ/viewform?usp=pp_url&entry.1651274551=$email"
+      function clickJoin() {
+        let button = document.getElementById("join")
+        button.classList.add('is-loading')
+        let email = document.getElementById("email").value
+        window.location = formurl.replace("$email", email.trim())
+      }
+    </script>
+  </head>
+  <body>
+    <div class="columns is-mobile">
+      <div class="column"></div>
+      <div class="column is-8">
+        <nav class="navbar is-white" role="navigation" aria-label="main navigation">
+          <div class="navbar-brand">
+            <a class="navbar-item logo" href="/">Supersheets</a>
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+          <div class="navbar-menu">
+            <div class="navbar-start">
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                  Demos
+                </a>
+                <div class="navbar-dropdown">
+                  <a class="navbar-item" href="/demos/gatsby-blog.html">
+                    Gatsby
+                  </a>
+                  <a class="navbar-item" href="/demos/gridsome-blog.html">
+                    Gridsome
+                  </a>
+                </div>
+              </div>
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                  Docs
+                </a>
+                <div class="navbar-dropdown">
+                  <a class="navbar-item" href="https://docs.google.com/document/d/18ElzHxn9DgITDM55Rpz5NGEWpbM8oyKIBswkkrr0jfM/edit#" target="_blank">
+                    Creating a Supersheet
+                  </a>
+                  <a class="navbar-item" href="https://docs.google.com/document/d/1MwXzWWKM4gSm1VELfQWFifiwHGgO8Ca3mxmg6T5GIhU/edit#" target="_blank">
+                    Querying a Supersheet
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="navbar-end">
+              <div class="navbar-item">
+                <div class="buttons">
+                  <a class="button is-white" href="https://app.supersheets.io">
+                    Sign in
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <section class="hero is-medium">
+          <div class="hero-body">
+            <div class="container">
+              <h1 class="title is-1">
+                Gatsby Blog Demo
+              </h1>
+              <h2 class="subtitle">
+                A clone of the official <a href="https://github.com/gatsbyjs/gatsby-starter-blog">gatsby-starter-blog</a> powered by Supersheets. 
+              </h2>
+            </div>
+            <br/>
+            <div>
+              <a class="button is-danger" href="https://lucid-colden-c33dbe.netlify.com/" target="_blank">View Site</a>
+              <a class="button is-danger" href="https://docs.google.com/spreadsheets/d/1Li6CHJtW5ShwzVDRFRMCjhYPfmNNWRamquW4S_EaCck/edit#gid=0" target="_blank">View Google Sheet</a>
+              <a class="button is-danger" href="https://github.com/supersheets/netlify-gatsby-blog" target="_blank">View Source Code</a>
+            </div>
+          </div>
+        </section>
+        <section class="section">
+          <!-- Main container -->
+         
+        </section>
+      </div>
+      <div class="column is-2"></div>
+    </div>
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p class="help">
+          &copy; Funcmatic Inc.
+        </p>
+        <p class="help">
+          <a href="/privacy">Privacy Policy</a> &middot;
+          <a href="/terms">Terms of Service</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+

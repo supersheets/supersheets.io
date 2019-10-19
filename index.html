@@ -18,12 +18,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <style>
-      /*
+      body {
+        
+      }
       .logo {
         font-family: 'Luckiest Guy', cursive;
-        font-size: 1.25rem;
+        font-size: 150%;
+        padding-top: 7%;
+        color: #000;
       }
-      */
+      .section.demo .logo {
+        font-size: 2.5rem;
+        line-height: 4rem;
+      }
+      .headline {
+        line-height: 1.65em;
+        color: #000;
+      }
+      .highlight {
+        padding: .2em;
+        color: #FFF;
+        background: #ff3860;
+      }
       .columns nav {
         padding: 0 .75rem;
       }
@@ -36,6 +52,48 @@
       .hero ul li {
         margin-left: 2rem;
         list-style-type: disc;
+      }
+      .section {
+        margin-top:2rem;
+      }
+      .section .title {
+        color: #000;
+      }
+      .section.cta {
+        padding-left: 3rem;
+        padding-right: 3rem;
+      }
+      .footer {
+        background-color: #FFF;
+      }
+      .hero.cta p {
+        color: #FFF;
+      }
+      span.step {
+        background: #ff3860;
+        border-radius: 0.8em;
+        -moz-border-radius: 0.8em;
+        -webkit-border-radius: 0.8em;
+        color: #ffffff;
+        display: inline-block;
+        font-weight: bold;
+        text-align: center;
+        width: 1.6em; 
+        line-height: 1.6em;
+        margin-right: .5em;
+        /* line-height: 1.6em;
+        margin-right: 3rem;
+        font-size: 1.5rem; */
+      }
+      .checkmark {
+        color:  #ff3860;
+      }
+      .features h3.is-4 {
+        margin-bottom: .5rem;
+      }
+      .features .description {
+        margin-left: 1.7rem;
+        margin-bottom: 2rem;
       }
     </style>
     <script>
@@ -50,7 +108,7 @@
   </head>
   <body>
     <div class="columns is-mobile">
-      <div class="column is-2"></div>
+      <div class="column"></div>
       <div class="column is-8">
         <nav class="navbar is-white" role="navigation" aria-label="main navigation">
           <div class="navbar-brand">
@@ -63,12 +121,38 @@
           </div>
           <div class="navbar-menu">
             <div class="navbar-start">
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                  Demos
+                </a>
+                <div class="navbar-dropdown">
+                  <a class="navbar-item" href="/demos/gatsby-blog.html">
+                    Gatsby
+                  </a>
+                  <a class="navbar-item" href="/demos/gridsome-blog.html">
+                    Gridsome
+                  </a>
+                </div>
+              </div>
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                  Docs
+                </a>
+                <div class="navbar-dropdown">
+                  <a class="navbar-item" href="https://docs.google.com/document/d/18ElzHxn9DgITDM55Rpz5NGEWpbM8oyKIBswkkrr0jfM/edit#" target="_blank">
+                    Creating a Supersheet
+                  </a>
+                  <a class="navbar-item" href="https://docs.google.com/document/d/1MwXzWWKM4gSm1VELfQWFifiwHGgO8Ca3mxmg6T5GIhU/edit#" target="_blank">
+                    Querying a Supersheet
+                  </a>
+                </div>
+              </div>
             </div>
             <div class="navbar-end">
               <div class="navbar-item">
                 <div class="buttons">
                   <a class="button is-white" href="https://app.supersheets.io">
-                    Sign in &#8594;
+                    Sign in
                   </a>
                 </div>
               </div>
@@ -79,44 +163,163 @@
           <div class="hero-body">
             <div class="container">
               <h1 class="title headline is-1">
-                Features, not forms 
+                The <span class="highlight">No Code</span> database<br/>
+                managed with <span class="highlight">Google Sheets</span><br/>
+                and accessed using <span class="highlight">GraphQL</span>
               </h1>
-              <h2 class="subtitle">
-                Supersheets is headless CMS powered by G Suite
-              </h2>
-              <ul>
-                <li>Writers create content with Google Sheets and Docs.</li> 
-                <li>Developers build product and not internal forms.</li>
-              </ul>
-              <br/>
-              <p class="help">
-                  <strong>Currently in private beta.</strong>
-              </p>
-              <div class="columns">
-                <div class="column">
-                    <p class="help">
-                      There are applications in production that are built on Supersheets. Please sign up below if you feel Supersheets could be ideal for your project.
-                    </p>
-                    <br/>
-                    <div class="field has-addons">
-                      <div class="control is-expanded">
-                        <input id="email" class="input is-medium" type="text" placeholder="Email address">
-                      </div>
-                      <div class="control">
-                        <a id="join" class="button is-info is-medium" onclick="clickJoin()">
-                          Join our beta
-                        </a>
-                      </div>
-                    </div>
-                </div>
-                <div class="column is-5"></div>
+            </div>
+          </div>
+        </section>
+        <section class="section how it works">
+          <div class="container">
+            <h2 class="title is-2">
+              How it works:
+            </h2>
+            <hr/>
+            <br/>
+            <div class="columns">
+              <div class="column">
+                <h2 class="title is-5">
+                  <span class="step">1</span>
+                  <br/><br/> 
+                  Put your data in a Google Sheet
+                </h2>
+              </div>
+              <div class="column">
+                <h2 class="title is-5">
+                  <span class="step">2</span>
+                  <br/><br/>
+                  Create your database with one click
+                </h2>
+              </div>
+              <div class="column">
+                <h2 class="title is-5">
+                  <span class="step">3</span>
+                  <br/><br/>
+                  Query your data using GraphQL 
+                </h2>
               </div>
             </div>
           </div>
         </section>
-        <section class="section">
+        <section class="section demo">
+            <div class="container">
+              <h2 class="title is-2">
+                See it in action:
+              </h2>
+              <br/>
+              <div class="columns">
+                <div class="column">
+                  <div class="card">
+                    <div class="card-content">
+                      <p class="title">
+                        <figure class="image">
+                          <img style="height:80px" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDYgMjgiIGZvY3VzYWJsZT0iZmFsc2UiPgogIDxwYXRoIGQ9Ik02Mi45IDEyaDIuOHYxMGgtMi44di0xLjNjLTEgMS41LTIuMyAxLjYtMy4xIDEuNi0zLjEgMC01LjEtMi40LTUuMS01LjMgMC0zIDItNS4zIDQuOS01LjMuOCAwIDIuMy4xIDMuMiAxLjZWMTJ6bS01LjIgNWMwIDEuNiAxLjEgMi44IDIuOCAyLjggMS42IDAgMi44LTEuMiAyLjgtMi44IDAtMS42LTEuMS0yLjgtMi44LTIuOC0xLjYgMC0yLjggMS4yLTIuOCAyLjh6bTEzLjUtMi42VjIyaC0yLjh2LTcuNmgtMS4xVjEyaDEuMVY4LjZoMi44VjEyaDEuOXYyLjRoLTEuOXptOC41IDBjLS43LS42LTEuMy0uNy0xLjYtLjctLjcgMC0xLjEuMy0xLjEuOCAwIC4zLjEuNi45LjlsLjcuMmMuOC4zIDIgLjYgMi41IDEuNC4zLjQuNSAxIC41IDEuNyAwIC45LS4zIDEuOC0xLjEgMi41cy0xLjggMS4xLTMgMS4xYy0yLjEgMC0zLjItMS0zLjktMS43bDEuNS0xLjdjLjYuNiAxLjQgMS4yIDIuMiAxLjIuOCAwIDEuNC0uNCAxLjQtMS4xIDAtLjYtLjUtLjktLjktMWwtLjYtLjJjLS43LS4zLTEuNS0uNi0yLjEtMS4yLS41LS41LS44LTEuMS0uOC0xLjkgMC0xIC41LTEuOCAxLTIuMy44LS42IDEuOC0uNyAyLjYtLjcuNyAwIDEuOS4xIDMuMiAxLjFsLTEuNCAxLjZ6bTYuMS0xLjFjMS0xLjQgMi40LTEuNiAzLjItMS42IDIuOSAwIDQuOSAyLjMgNC45IDUuM3MtMiA1LjMtNSA1LjNjLS42IDAtMi4xLS4xLTMuMi0xLjZWMjJIODNWNS4yaDIuOHY4LjF6bS0uMyAzLjdjMCAxLjYgMS4xIDIuOCAyLjggMi44IDEuNiAwIDIuOC0xLjIgMi44LTIuOCAwLTEuNi0xLjEtMi44LTIuOC0yLjgtMS43IDAtMi44IDEuMi0yLjggMi44em0xMyAzLjVMOTMuNyAxMkg5N2wzLjEgNS43IDIuOC01LjdoMy4ybC04IDE1LjNoLTMuMmwzLjYtNi44ek01NCAxMy43aC03djIuOGgzLjdjLS42IDEuOS0yIDMuMi00LjYgMy4yLTIuOSAwLTUtMi40LTUtNS4zUzQzLjEgOSA0NiA5YzEuNiAwIDMuMi44IDQuMiAyLjFsMi4zLTEuNUM1MSA3LjUgNDguNiA2LjMgNDYgNi4zYy00LjQgMC04IDMuNi04IDguMXMzLjQgOC4xIDggOC4xIDgtMy42IDgtOC4xYy4xLS4zIDAtLjUgMC0uN3oiLz4KICA8cGF0aCBkPSJNMjUgMTRoLTd2Mmg0LjhjLS43IDMtMi45IDUuNS01LjggNi41TDUuNSAxMWMxLjItMy41IDQuNi02IDguNS02IDMgMCA1LjcgMS41IDcuNCAzLjhsMS41LTEuM0MyMC45IDQuOCAxNy43IDMgMTQgMyA4LjggMyA0LjQgNi43IDMuMyAxMS42bDEzLjIgMTMuMkMyMS4zIDIzLjYgMjUgMTkuMiAyNSAxNHptLTIyIC4xYzAgMi44IDEuMSA1LjUgMy4yIDcuNiAyLjEgMi4xIDQuOSAzLjIgNy42IDMuMkwzIDE0LjF6IiBmaWxsPSIjZmZmIi8+CiAgPHBhdGggZD0iTTE0IDBDNi4zIDAgMCA2LjMgMCAxNHM2LjMgMTQgMTQgMTQgMTQtNi4zIDE0LTE0UzIxLjcgMCAxNCAwek02LjIgMjEuOEM0LjEgMTkuNyAzIDE2LjkgMyAxNC4yTDEzLjkgMjVjLTIuOC0uMS01LjYtMS4xLTcuNy0zLjJ6bTEwLjIgMi45TDMuMyAxMS42QzQuNCA2LjcgOC44IDMgMTQgM2MzLjcgMCA2LjkgMS44IDguOSA0LjVsLTEuNSAxLjNDMTkuNyA2LjUgMTcgNSAxNCA1Yy0zLjkgMC03LjIgMi41LTguNSA2TDE3IDIyLjVjMi45LTEgNS4xLTMuNSA1LjgtNi41SDE4di0yaDdjMCA1LjItMy43IDkuNi04LjYgMTAuN3oiIGZpbGw9IiM2MzkiLz4KPC9zdmc+Cg==">
+                        </figure>
+                      </p>
+                      <br/>
+                      <p class="subtitle">
+                        Create a Gatsby site with content from Supersheets.
+                      </p>
+                      <p>
+                        <a class="button is-danger" href="demos/gatsby-blog.html">Learn more</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="card">
+                    <div class="card-content">
+                      <p class="title">
+                        <figure class="image" style="padding:10px 0;">
+                          <img style="height:60px;" src="https://gridsome.org/logos/logo-normal.svg">
+                        </figure>
+                      </p>
+                      <br/>
+                      <p class="subtitle">
+                        Create a Gridsome site using content from a Supersheet.
+                      </p>
+                      <p>
+                        <a class="button is-danger" href="demos/gridsome-blog.html">Learn more</a>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        <section class="section features">
           <div class="container">
+            <h2 class="title is-2">
+              Ready for production:
+            </h2>
+            <hr/>
+            <br/>
+            <div class="columns">
+              <div class="column">
+                <ul>
+                  <li>
+                    <h3 class="title is-4"><span class="checkmark">&#x2714;</span> Fast performance</h3>
+                    <p class="description">We automatically keep frequently accessed data in Redis so that average query response times is &lt; 100ms.</p>
+                  </li>
+                  <li>
+                    <h3 class="title is-4"><span class="checkmark">&#x2714;</span> Powerful querying</h3>
+                    <p class="description">Queries are powered by MongoDB so you have all the capabilities of the most popular NoSQL database.</p>
+                  </li>
+                  <li>
+                      <h3 class="title is-4"><span class="checkmark">&#x2714;</span> Expressive data types</h3>
+                      <p class="description">Easily convert your Google data into Ints, Floats, Arrays, Datetimes, Markdown, and more.</p>
+                    </li>
+                </ul>
+              </div>
+              <div class="column">
+                <ul>
+                  <li>
+                    <h3 class="title is-4"><span class="checkmark">&#x2714;</span> Data security and access control</h3>
+                    <p class="description">Keep your Google Sheets and Docs private and protect access using API keys or web tokens.</p>
+                  </li>
+                  <li>
+                    <h3 class="title is-4"><span class="checkmark">&#x2714;</span> Multiple environments</h3>
+                    <p class="description">Use dev, staging, and prod endpoints to verify and test your data before you go live.</p>
+                  </li>
+                  <li>
+                    <h3 class="title is-4"><span class="checkmark">&#x2714;</span> Monitoring and Analytics</h3>
+                    <p class="description">Easily view usage statistics and performance and get alerted of any errors.</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
+        </section>
+        <section class="section hero is-danger cta">
+          <h2 class="title is-2">
+            Get early access.
+          </h2>
+          <p>
+            <b>Supersheets is currently in private beta.</b>
+          </p>
+          <p>
+            Supersheets is ideal for projects that require read-only access to human-authored content. <br/>
+            We are working to open Supersheets to many more creators. <br/>If your project is a good fit, sign up below.
+          </p>
+          <br/>
+          <div class="columns">
+            <div class="column">
+              <br/>
+              <div class="field has-addons">
+                <div class="control is-expanded">
+                  <input id="email" class="input is-medium" type="text" placeholder="Email address">
+                </div>
+                <div class="control">
+                  <a id="join" class="button is-warning is-medium" onclick="clickJoin()">
+                    Request Access
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="column is-5"></div>
+          </div>
+          <br/>
         </section>
       </div>
       <div class="column is-2"></div>
